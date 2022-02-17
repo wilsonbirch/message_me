@@ -1,0 +1,29 @@
+.onboarding {
+    background-color: #2E2E2E;
+    width:50%;
+    margin: 120px auto;
+    color:#F1F1F1;
+    border-radius: 18px;
+    padding: 30px 60px;
+    h1{
+        text-align: center;
+    }
+    &-form{
+        margin: 20px auto;
+        width:50%;
+        &-group{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin:10px 0px;
+        }
+        &-label{
+            padding:4px;
+        }
+        &-input{
+            width: 100%;
+            padding:4px;
+            border-radius: 4px;
+        }
+    }
+}

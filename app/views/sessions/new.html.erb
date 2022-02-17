@@ -1,24 +1,22 @@
-<h1 class= "title">Log in to MessageMe</h1>
-
-<div class ="container">
+<div class ="onboarding">
+  <h1 class= "title">Log in to MessageMe</h1>
   <%# <%= render "shared/errors", obj: @user %>
-  <div class="container articles-content" >
-    <%= form_with(scope: :session, url: login_path, class: "shadow p-3 mb-5 bg-secondary rounded", local: true, data: { turbo: false })  do |f| %>
-      <div class="form-group row">
-        <%= f.label :email, class: "col-2 col-form-label" %>
-        <div class="col-10">
-          <%= f.email_field :email, class:"form-control shadow rounded", placeholder: "Enter your email address" %>
-        </div>
+  <%= form_with(scope: :session, url: login_path, class: "onboarding-form", local: true, data: { turbo: false })  do |f| %>
+    <div class="onboarding-form-group">
+      <%= f.label "Email: ", class: "onboarding-form-label" %>
+      <div>
+        <%= f.email_field :email, class:"onboarding-form-input", placeholder: "Enter your email address" %>
       </div>
-      <div class="form-group row">
-        <%= f.label :password, class: "col-2 col-form-label" %>
-        <div class="col-10">
-          <%= f.password_field :password, class:"form-control shadow rounded", placeholder: "Enter your password" %>
-        </div>
+    </div>
+    <div class="onboarding-form-group">
+      <%= f.label "Password: ", class: "onboarding-form-label" %>
+      <div>
+        <%= f.password_field :password, class:"onboarding-form-input", placeholder: "Enter your password" %>
       </div>
-      <div class="btn-container">
-        <%= f.submit 'Log in', class: "btn btn-outline-dark btn-lg" %>
-      </div>
-    <%end%>
-  </div>
+    </div>
+    <div class="btn-container">
+      <%= f.submit 'Log in', class: "btn btn-submit" %>
+    </div>
+  <%end%>
+
 </div>
