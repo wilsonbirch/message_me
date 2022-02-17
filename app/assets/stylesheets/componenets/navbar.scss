@@ -6,6 +6,9 @@
 	top: 0;
 	width: 100%;
     &-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         margin: auto !important;
         max-width: 1200px;
         &-logo{
@@ -13,14 +16,35 @@
             flex-direction: row;
             font-size: 22px;
             padding:24px 0px;
-            p{
+            &-text{
+                color:#2E2E2E;
                 font-weight: 900;
                 font-size: 24px;
                 margin:0px 0px 0px 6px;
+                text-decoration: none;
+
             }
             i{
                 margin:2px 0px 0px 0px;
             }
+        }
+        &-links{
+            padding:26px 0px;
+            ul{
+                display: flex;
+                flex-direction: row;
+                .nav-link{
+                    margin: 0px 4px;
+                    font-weight: 400;
+                    font-size: 18px;
+                    text-decoration: none;
+                    color: #2E2E2E;
+                }
+                .active{
+                    font-weight: 600;
+                }
+            }
+
         }
     }
 }
