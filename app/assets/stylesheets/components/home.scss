@@ -1,0 +1,91 @@
+.chat{
+    .form-input{
+        border: none;
+        border-radius: 18px;
+        background:#474747;
+        color: #F1F1F1;
+        height: 36px;
+        width: 100%;
+        padding: 2px 10px;
+        margin: 8px 0px 0px 0px;
+        input{
+            background:#474747;
+            border: none;
+            color: #F1F1F1;
+            padding: 0 10px;
+            height: 100%;
+            width: 85%;
+            font-size: 12px;
+            line-height: 16px;
+        }
+        input:focus {
+            background-color: #474747;
+        }
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus, 
+        input:-webkit-autofill:active  {
+            -webkit-box-shadow: 0 0 0 30px #474747 inset;
+            -webkit-text-fill-color: #F1F1F1;
+            
+        }
+        svg{
+            color: #fff;
+            font-weight: 900;
+            font-weight: 900;
+            font-size: 16px;
+            line-height: 18px;
+        }
+    }
+
+    &-sidebar{
+        max-width:25%;
+        margin: 10px;
+        &-list{
+            width:100%;
+            margin: 20px 0px 0px 10px;
+            &-item{
+                display: flex;
+                flex-direction: row;
+                margin:30px 0px 20px 10px;
+                width:100%;
+                background-color: #474747;
+                border-radius: 8px;
+                svg{
+                    height: 64px;
+                    width: 64px;
+                    position: relative;
+                    bottom:20px;
+                    right:20px;
+                }
+                &-bottom{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+                &-text{
+                    width:100%;
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    right:10px;
+                    color: #F1F1F1;
+                    padding: 6px 0px;
+                    &-name{
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 24px;
+                        padding: 0px 0px 6px 0px;
+                    }
+                    &-description{
+                        font-size: 12px;
+                        line-height: 16px;
+                    }
+                    &-time{
+                        @extend .chat-sidebar-list-item-text-description;
+                    }
+                }
+            }
+        }
+    }
+}
