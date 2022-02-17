@@ -1,0 +1,26 @@
+.navbar{
+    background: #E6E6E6;
+    border-bottom: 1px solid #2E2E2E;
+	height: 72px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+    &-content{
+        margin: auto !important;
+        max-width: 1200px;
+        &-logo{
+            display:flex;
+            flex-direction: row;
+            font-size: 22px;
+            padding:24px 0px;
+            p{
+                font-weight: 900;
+                font-size: 24px;
+                margin:0px 0px 0px 6px;
+            }
+            i{
+                margin:2px 0px 0px 0px;
+            }
+        }
+    }
+}

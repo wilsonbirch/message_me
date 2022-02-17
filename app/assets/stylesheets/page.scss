@@ -1,6 +1,11 @@
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #F1F1F1;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
 .content{
-    &-container{
-        margin: auto !important;
-        max-width: 1200px;
-    }
+    margin: 100px auto;
+    max-width: 1200px;
 }
