@@ -30,6 +30,11 @@ const users=[
 
 const ChatApp = () =>  {
     const [values, setValues] = useState({
+        active: {
+            name: 'Wilson',
+            img: '',
+            messages:[]
+        },
         searchName: ''
     }) 
 
@@ -65,16 +70,20 @@ const ChatApp = () =>  {
                                         <p className={`${rootclass}-sidebar-list-item-text-description`}>{user.first.length>=30 ? `${user.first.slice(0, 30)}...` : user.first}</p>
                                         <p className={`${rootclass}-sidebar-list-item-text-time`}>10:30am</p>
                                     </div>
-                                    
                                 </div>
-
                             </div>
                         )
                     })}
                 </div>
             </div>
             <div className={`${rootclass}-main`}>
-
+                <div className={`${rootclass}-main-header`}>
+                    <div className={`${rootclass}-main-header-user`}>
+                        <FontAwesomeIcon icon="fa-solid fa-circle-user" />
+                        <p>Wislon</p>
+                    </div> 
+                    <FontAwesomeIcon icon="fa-solid fa-circle-info" />
+                </div>
             </div>
         </div>
 
