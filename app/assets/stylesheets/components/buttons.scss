@@ -18,4 +18,8 @@
         background: -webkit-gradient(linear, left top, left bottom, from(#9a00ff), to(#fe00ee));
         border: 1px solid #F1F1F1;
     }
+    &-primary{
+        @extend .btn-submit;
+        background-color: #727272;
+    }
 }
