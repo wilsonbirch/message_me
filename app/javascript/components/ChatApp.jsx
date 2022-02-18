@@ -35,13 +35,15 @@ const ChatApp = () =>  {
             img: '',
             messages:[]
         },
-        searchName: ''
+        search: '',
+        compose: ''
     }) 
 
     const handleChange = (e) => {
+        console.log(e.target.id)
         setValues({
             ...values,
-            searchName: e.target.value
+            [e.target.id]: e.target.value
         })
     }
 
@@ -53,7 +55,7 @@ const ChatApp = () =>  {
                     <input
                         id='search'
                         type="text"
-                        value={values.searchName}
+                        value={values.search}
                         placeholder='Search'
                         onChange={(e) => handleChange(e)}
                         maxLength={100}
@@ -83,6 +85,22 @@ const ChatApp = () =>  {
                         <p>Wislon</p>
                     </div> 
                     <FontAwesomeIcon icon="fa-solid fa-circle-info" />
+                </div>
+                <div className={`${rootclass}-main-window`}>
+                    <p>chats</p>
+                </div>
+                <div className={`${rootclass}-main-textarea`}>
+                    <div className="form-input">
+                        <input
+                            id='compose'
+                            type="text"
+                            value={values.compose}
+                            placeholder='Write message...'
+                            onChange={(e) => handleChange(e)}
+                            maxLength={5000}
+                        />
+                    </div>
+                    <FontAwesomeIcon icon="fa-solid fa-circle-plus" />
                 </div>
             </div>
         </div>

@@ -93,10 +93,13 @@
     }
 
     &-main{
-        background-color: #474747;
+        background-color: #2E2E2E;
         width:70%;
         margin: 10px;
         border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         &-header{
             display: flex;
             flex-direction: row;
@@ -104,6 +107,11 @@
             margin: 16px;
             padding: 0px 0px 20px 0px;
             border-bottom: 1px #727272 solid;
+            .fa-circle-info{
+                color:#E6E6E6;
+                font-size:16px;
+                margin: 12px 0px 0px 0px;
+            }
             &-user{
                 display: flex;
                 flex-direction: row;
@@ -112,16 +120,34 @@
                     height: 40px;
                 }
                 p{
+                    color:#E6E6E6;
                     margin: 0px 0px 0px 8px;
                     font-size: 16px;
                     line-height: 40px;
                     font-weight: 700;
                 }
             }
-            .fa-circle-info{
-                color:#fff;
-                font-size:16px;
-                margin: 12px 0px 0px 0px;
+
+        }
+        &-window{
+            height:100%;
+        }
+        &-textarea{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 16px;
+            .form-input{
+                width: 94%;
+                input{
+                    width:94%
+                }
+            }
+            svg{
+                color:#F1F1F1;
+                width: 22px;
+                height: 22px;
+                margin: 16px 0px 0px 0px;
             }
         }
     }
